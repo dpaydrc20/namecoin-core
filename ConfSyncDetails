@@ -1,0 +1,48 @@
+# Quick Setup for Namecoin Node
+
+### Steps
+
+1. **Edit `namecoin.conf`:**
+   ```bash
+   nano ~/.namecoin/namecoin.conf
+   ```
+   
+2. **Copy and paste this config into the file:**
+
+   ```ini
+   daemon=1
+   server=1
+   rpcuser=yourusername
+   rpcpassword=yourstrongpassword
+   rpcport=8336
+   txindex=1
+   listen=1
+   addnode=47.89.190.70
+   addnode=209.58.147.17
+   addnode=91.217.137.27
+   addnode=47.91.253.239
+   addnode=47.90.246.229
+   addnode=47.254.173.235
+   addnode=107.221.86.186
+   addnode=162.62.27.196
+   addnode=81.2.237.10
+   addnode=52.205.29.182
+   addnode=95.217.78.81
+   addnode=116.203.63.94
+   addnode=47.252.14.48
+   ```
+
+3. **Save and exit** (`Ctrl+O`, `Enter`, `Ctrl+X`).
+
+4. **Set file permissions:**
+   ```bash
+   chmod 600 ~/.namecoin/namecoin.conf
+   ```
+
+5. **Restart Namecoin daemon:**
+   ```bash
+   namecoin-cli stop
+   namecoind
+   ```
+
+Your Namecoin node is now configured and ready to sync!
